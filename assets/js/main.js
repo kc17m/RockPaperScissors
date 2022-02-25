@@ -10,19 +10,14 @@ console.log(symbolCollection);
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
-//let symbols = document.querySelector(".symbols")
 
-
-//let rockUser, paperUser, scissorsUser;
-
-// conditional text
 
 let letsPlay = document.querySelector(".letsPlay")
 console.log(letsPlay);
 let res = document.querySelector(".res") // will show results
 let currentRound = document.querySelector("#currentRound");
 let total = document.querySelector('#total');
-let counter = -1;
+let counter = 0;
 let totals = 0;
 
 //scores
@@ -67,20 +62,22 @@ symbolCollection.forEach((item) => {
         if (myTip == "rock") {
             if (compTip == 1) {
                 letsPlay.innerHTML = `Rock for both. No score.`
-                rock.style.border = "yellow";
-                rock.style.transition = "border 2s";
+                rock.style.color = "yellow";
+                rock.style.transition = "all 1s"
                 console.log("myTipp & compTip = rock");
             }
             else if (compTip == 2) {
                 letsPlay.innerHTML = `Paper hits Rock - Computer scored.`
-                rock.style.border = "1px solid red";
+                rock.style.color = "red";
+                rock.style.transition = "all 1s"
                 console.log("compTip = rock");
                 compScoreVal++;
                 compScore.innerHTML = compScoreVal;
             }
             else {
                 letsPlay.innerHTML = `Paper hits Rock - You scored.`
-                rock.style.border = "1px solid green";
+                rock.style.color = "green";
+                rock.style.transition = "all 1s"
                 console.log("compTip = scissors");
                 myScoreVal++;
                 myScore.innerHTML = myScoreVal;
@@ -89,20 +86,23 @@ symbolCollection.forEach((item) => {
         else if (myTip == "paper") {
             if (compTip == 1) {
                 letsPlay.innerHTML = `Paper hits Rock. You scored.`
-                paper.style.border = "1px solid green";
+                paper.style.color = "green";
+                rock.style.transition = "all 1s";
                 console.log("compTip = rock");
                 myScoreVal++;
                 myScore.innerHTML = myScoreVal;
             }
             else if (compTip == 2) {
                 letsPlay.innerHTML = `Paper for both. No score.`
-                paper.style.border = "1px solid yellow";
+                paper.style.color = "yellow";
+                rock.style.transition = "all 1s";
                 console.log("compTip = paper");
 
             }
             else {
                 letsPlay.innerHTML = `Scissors hits Paper - Computer scored.`
-                paper.style.border = "1px solid red";
+                paper.style.color = "red";
+                rock.style.transition = "all 1s";
                 console.log("compTip = scissors");
                 compScoreVal++;
                 compScore.innerHTML = compScoreVal;
@@ -111,14 +111,17 @@ symbolCollection.forEach((item) => {
         else {
             if (compTip == 1) {
                 letsPlay.innerHTML = `Rock hits Paper. Computer scored.`
-                scissors.style.border = "1px solid red";
+                scissors.style.color = "red";
+                scissors.style.transition = "all 1s";
+                rock.style.transition = "all 1s"
                 console.log("compTip = rock");
                 compScoreVal++;
                 compScore.innerHTML = compScoreVal;
             }
             else if (compTip == 2) {
                 letsPlay.innerHTML = `Scissor hits Paper. You scored.`
-                scissors.style.border = "1px solid green";
+                scissors.style.color = "green";
+                scissors.style.transition = "all 1s";
                 console.log("compTip = paper");
                 myScoreVal++;
                 myScore.innerHTML = myScoreVal;
@@ -126,11 +129,24 @@ symbolCollection.forEach((item) => {
             }
             else {
                 letsPlay.innerHTML = `Scissors for both. No score.`
-                scissors.style.border = "1px solid yellow";
+                scissors.style.color = "yellow";
+                scissors.style.transition = "all 1s";
                 console.log("compTip = scissors");
             }
-
         }
+        window.addEventListener("mousemove", e => {
+            paper.style.color = "unset";
+            paper.style.transition = "all 1s"
+            rock.style.color = "unset";
+            rock.style.transition = "all 1s"
+            scissors.style.color = "unset";
+            scissors.style.transition = "all 1s"
+        })
+
+
+
+
+        // item.style.color = "unset";
 
 
 

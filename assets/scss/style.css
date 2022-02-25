@@ -35,6 +35,7 @@ fieldset {
 .symbols {
   margin: 3% auto;
   display: flex;
+  justify-content: space-around;
 }
 
 .hidden {
@@ -50,14 +51,28 @@ button {
   margin: 2%;
 }
 
-img {
-  width: 70%;
+.symbolCollection {
+  font-size: 8rem;
   cursor: pointer;
-  padding: 10%;
-  border-radius: 50%;
-}
-img:hover, img:active {
-  width: 70%;
   padding: 5%;
-  border: none;
+  margin: 2%;
+}
+.symbolCollection:hover {
+  font-size: 10rem;
+  transition: 0.5s linear;
+}
+
+.yellow {
+  color: yellow;
+  transition: 0.5s linear;
+}
+
+.green {
+  color: green;
+  transition: 0.5s linear;
+}
+
+.red {
+  color: red;
+  transition: 0.5s linear;
 }/*# sourceMappingURL=style.css.map */
