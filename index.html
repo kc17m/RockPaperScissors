@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <fieldset>
+            <form action="" id="check" onsubmit=" return false >
+                <label for=" roundSelect">how many rounds?</label>
+                <br>
+                <div class="radio">
+                    <div>
+                        <input id="five" value="5" type="radio" name="roundSelect">
+                        <label for="five">
+                            <h5>5</h5>
+                        </label>
+                    </div>
+                    <div><input id="ten" value="10" type="radio" name="roundSelect" checked>
+                        <label for="ten">
+                            <h5>10</h5>
+                        </label>
+                    </div>
+                    <div>
+                        <input id="fifteen" value="4" type="radio" name="roundSelect">
+                        <label for="fifteen">
+                            <h5>15</h5>
+                        </label>
+                    </div>
+                    <div>
+                        <input id="twenty" value="4" type="radio" name="roundSelect">
+                        <label for="twenty">
+                            <h5>20</h5>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div id="roundCount" class="willbehidden###">
+                <h2><span id="currentRound">0</span>/<span id="total">0</span></h2>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div>
+                <h3 class="user">
+                    <span class="user">USER</span> : <span class="user">COMPUTER</span>
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    <span id="myScore">0</span> : <span id="compScore">0</span>
+                </h3>
+            </div>
+        </fieldset>
+        <section class="play">
+            <h3 class="letsPlay">Let's play </h3>
+            <!-- <button class="playButton" onclick="play()">Klick here to start game</button> -->
+            <h3 class="res hidden">Dummy Text. You <span class="win_lose">lost/win</span>!
+            </h3>
+            <h3 id="gameover" class="hidden"><span class="you">GAME OVER!</span></h3>
+            </div>
+            <div id="congrats" class="hidden"></div>
+            <div class="symbols">
+                <h3><img class="symbolCollection" src="assets/img/hand-back-fist-regular.svg" id="rock" alt="rock"></h3>
+                <h3><img class="symbolCollection" src="assets/img/hand-regular.svg" id="paper" alt="paper"></h3>
+                <h3><img class="symbolCollection" src="assets/img/hand-peace-regular.svg" id="scissors" alt="scissors">
+                </h3>
+            </div>
+            <div>
+                <h3>MAKE YOUR MOVE.</h3>
+
+                <button class="reset" onclick="restart()">Reset?</button>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/97f8f2a2f5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
