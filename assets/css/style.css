@@ -17,18 +17,10 @@ fieldset {
     text-align: center;
 }
 
+
+
 .radio {
     display: flex;
-
-}
-
-#four, #five, #six, #custom {
-       margin-left: 10%;
-}
-
-
-
-.radio {
     text-align: left;
     margin: 6% 10%;
     line-height: 2rem;

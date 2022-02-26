@@ -19,35 +19,36 @@
     <main>
         <fieldset>
             <form action="" id="check" onsubmit=" return false >
-                <label for=" roundSelect">how many rounds?</label>
+                <label for=" roundSelect">
+                <h3>How many rounds you would like to play?</h3></label>
                 <br>
                 <div class="radio">
                     <div>
                         <input id="five" value="5" type="radio" name="roundSelect">
                         <label for="five">
-                            <h5>5</h5>
+                            <h4>5</h4>
                         </label>
                     </div>
                     <div><input id="ten" value="10" type="radio" name="roundSelect" checked>
                         <label for="ten">
-                            <h5>10</h5>
+                            <h4>10</h4>
                         </label>
                     </div>
                     <div>
                         <input id="fifteen" value="4" type="radio" name="roundSelect">
                         <label for="fifteen">
-                            <h5>15</h5>
+                            <h4>15</h4>
                         </label>
                     </div>
                     <div>
                         <input id="twenty" value="4" type="radio" name="roundSelect">
                         <label for="twenty">
-                            <h5>20</h5>
+                            <h4>20</h4>
                         </label>
                     </div>
                 </div>
             </form>
-            <div id="roundCount" class="willbehidden###">
+            <div id="roundCount" class="hidden">
                 <h2><span id="currentRound">0</span>/<span id="total">0</span></h2>
             </div>
         </fieldset>
@@ -60,17 +61,15 @@
             </div>
             <div>
                 <h3>
-                    <span id="myScore">0</span> : <span id="compScore">0</span>
+                    <span class="myScore">0</span> : <span class="compScore">0</span>
                 </h3>
             </div>
         </fieldset>
         <section class="play">
-            <h3 class="letsPlay">Let's play </h3>
+            <h3 class="letsPlay">Let's play - just select one of the icons below.</h3>
             <!-- <button class="playButton" onclick="play()">Klick here to start game</button> -->
-            <h3 class="res hidden">Dummy Text. You <span class="win_lose">lost/win</span>!
-            </h3>
-            <h3 id="gameover" class="hidden"><span class="you">GAME OVER!</span></h3>
-            </div>
+
+
             <div id="congrats" class="hidden"></div>
             <div class="symbols">
                 <h3 class="symbolCollection" id="rock" alt="rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>
@@ -83,8 +82,18 @@
             </div>
             <div>
                 <h3>MAKE YOUR MOVE.</h3>
+            </div>
+            <div id="gameover" class="hidden">
+                <h3>GAME OVER!</h3>
+                <h3>Your Score: <span class="myScore2">0</span></h3>
+                <h3>Computer's Score: <span class="compScore2">0</span></h3>
+                <h3 class="res"></h3>
+                <h3>GAME OVER!</h3>
+                <button class="reset" onclick="restart()">Play again?</button>
+            </div>
 
-                <button class="reset" onclick="restart()">Reset?</button>
+
+            <button class="reset" onclick="restart()">Reset</button>
             </div>
         </section>
     </main>
