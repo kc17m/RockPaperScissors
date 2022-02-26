@@ -46,9 +46,9 @@ button {
   background: lightslategray;
   color: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 34%;
   padding: 2%;
-  margin: 12%;
+  margin: 3%;
   font-size: 1.2rem;
 }
 
@@ -85,10 +85,10 @@ button {
 
 #gameover {
   position: absolute;
-  width: 67%;
-  height: 48%;
+  width: 90%;
+  height: 43%;
   top: 22%;
-  right: 16%;
+  right: 5%;
   background: #23424b;
   color: white;
   padding: 4%;
@@ -98,5 +98,5 @@ button {
 }
 
 .res {
-  margin: 14% 0;
+  margin: 9% 0;
 }/*# sourceMappingURL=style.css.map */
