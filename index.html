@@ -54,15 +54,15 @@
         </fieldset>
 
         <fieldset>
-            <div>
-                <h3 class="user">
-                    <span class="user">USER</span> : <span class="user">COMPUTER</span>
-                </h3>
+            <div class="flex">
+                <h2>YOU</h2>
+                <h2>COMPUTER</h2>
+
             </div>
             <div>
-                <h3>
+                <h1>
                     <span class="myScore">0</span> : <span class="compScore">0</span>
-                </h3>
+                </h1>
             </div>
         </fieldset>
         <section class="play">
@@ -70,14 +70,13 @@
             <!-- <button class="playButton" onclick="play()">Klick here to start game</button> -->
 
 
-            <div id="congrats" class="hidden"></div>
             <div class="symbols">
                 <h3 class="symbolCollection" id="rock" alt="rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>
                 </h3>
                 <h3 img class="symbolCollection" id="paper" alt="paper"><i class="fa fa-hand-paper-o"
                         aria-hidden="true"></i></h3>
-                <h3 class="symbolCollection" src="assets/img/hand-peace-regular.svg" id="scissors" alt="scissors"><i
-                        class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                <h3 class="symbolCollection" id="scissors" alt="scissors"><i class="fa fa-hand-peace-o"
+                        aria-hidden="true"></i>
                 </h3>
             </div>
             <div>
@@ -89,6 +88,19 @@
                 <h3 class="res"></h3>
                 <h3>GAME OVER!</h3>
                 <button class="reset" onclick="restart()">Play again?</button>
+            </div>
+            <div id="welcome">
+                <h1> <img src="assets/img/redPaperbird.png" alt="redPaperBird"> RedPaperBird proudly presents:</h1>
+                <div class="symbols block">
+                    <h2 class="symbolCollectionSmall hidden" id="rockStart" alt="rock"><i class="fa fa-hand-rock-o"
+                            aria-hidden="true"></i> ROCK
+                    </h2>
+                    <h2 img class="symbolCollectionSmall hidden" id="paperStart" alt="paper"><i
+                            class="fa fa-hand-paper-o" aria-hidden="true"></i> PAPER</h2>
+                    <h2 class="symbolCollectionSmall hidden" id="scissorsStart" alt="scissors"><i
+                            class="fa fa-hand-peace-o" aria-hidden="true"></i> SCISSORS
+                    </h2>
+                </div>
             </div>
 
 

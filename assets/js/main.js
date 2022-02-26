@@ -33,14 +33,38 @@ let compScore2 = document.querySelector(".compScore2");
 let compScoreVal = 0;
 console.log(compScore2, myScore2);
 
-let congrats = document.getElementById("congrats"); /// #####
+let welcome = document.getElementById("welcome"); /// start window
+console.log(welcome);
 let gameOver = document.getElementById("gameover"); /// final window, displays myScoreVal, compScoreVal + conditional message for win/lose/tie
-
-let master = document.getElementById("master"); ///###########
 
 let score = 0;
 
-// function play()
+
+//optional welcome window
+let rockStart = document.getElementById("rockStart");
+let paperStart = document.getElementById("paperStart");
+let scissorsStart = document.getElementById("scissorsStart");
+
+window.addEventListener("load", (e) => {
+    console.log("onload?");
+    let timeout = setTimeout(() => {
+        rockStart.classList.remove("hidden")
+    }, 2000);
+    timeout = setTimeout(() => {
+        paperStart.classList.remove("hidden")
+    }, 4000);
+    timeout = setTimeout(() => {
+        scissorsStart.classList.remove("hidden")
+    }, 6000);
+    timeout = setTimeout(() => {
+        welcome.classList.add("hidden");
+    }, 9000)
+
+})
+
+
+
+
 
 symbolCollection.forEach((item) => {
     item.addEventListener("click", () => {
