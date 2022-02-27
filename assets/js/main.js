@@ -68,7 +68,6 @@ yesPlease.addEventListener("click", (e) => {
     }, 11000)
 })
 
-
 // //option to ignore intro
 let noThanks = document.querySelector(".nothanks");
 console.log(noThanks);
@@ -179,7 +178,6 @@ symbolCollection.forEach((item) => {
                 scissors.style.transition = "all .51s";
                 console.log("compTip = scissors");
             }
-
         }
         //change back symbol color to unset
         window.addEventListener("mousemove", e => {
@@ -212,10 +210,9 @@ symbolCollection.forEach((item) => {
             res.innerHTML = `Equal score for both of you - I guess you give it another try!`
             console.log("tie");
         }
+
     });
 });
-
-
 
 //optional restart/reset
 function restart() {
