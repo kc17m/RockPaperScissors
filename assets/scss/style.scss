@@ -18,12 +18,17 @@ main {
 
 fieldset {
     width: 79%;
-    padding: 5% 0;
+    padding: 5%;
     margin: 5% auto;    
     border: 2px solid rgb(200, 200, 221);
     border-radius: 5px;
     font-size: 1.2rem;    
     text-align: center;
+    @media (min-width: 900px) {
+        font-size: 4rem;
+        width: 60%;
+        padding: 5%;
+    }
 }
 
 
@@ -31,13 +36,13 @@ fieldset {
     display: flex;
     justify-content: space-around;
     width: 90%; 
-    
 }
 
  .symbols {
     margin: 3% auto;
     display: flex;
     justify-content: space-around;
+    
 }
 
 .hidden {
@@ -54,17 +59,23 @@ button {
     font-size: 1.2rem;
 }
 
-
 .symbolCollection {
-    font-size: 6rem;    
+    font-size: 5rem;    
     cursor: pointer;
     padding: 5%;
-    margin: 2%;
+    margin: 2%;     
     &:hover  {
+        font-size: 7rem;
+        transition: .5s linear;          
+    }
+    @media (min-width: 900px) {
         font-size: 8rem;
-        transition: .5s linear;         
-    }    
+        &:hover  {
+            font-size: 12rem;                   
+        }
+    } 
 }
+    
 .yellow {
     color: yellow;
     transition: .5s linear;
@@ -78,14 +89,13 @@ button {
     transition: .5s linear;
 }
 .small {
-    font-size: .8rem;
+    font-size: 1rem;
     font-family: 'Courier New', Courier, monospace;
 }
 
 #gameover, #welcome {
     position: absolute;
     width: 90%;
-    height: 500px;
     top: 22%;
     right: 5%;
     background: rgb(35, 66, 75);
@@ -94,13 +104,15 @@ button {
     text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px 10px lightgrey;
-    
+    @media (min-width: 900px) {
+        font-size: 4rem;
+        width: 67%;
+        right: 17%;
+    } 
 }
-
 #welcome {
-    height: 300px;
     width: 80%;
-    right: 12%;
+    right: 9%;
 }
 
 .symbolCollectionSmall {
@@ -123,6 +135,21 @@ img {
     display: flex;
     justify-content: space-between;
     margin: 0 5%;
+}
+
+.playButton {
+    width: 69%;
+    margin: 8%;
+    padding: 10%;
+    border: 2px solid rgb(235, 217, 214);
+    box-shadow: 2px 2px 4px tomato;
+    background: rgb(231, 158, 62);
+    font-size: 2rem;
+    &:hover, &:active {
+        background: rgb(228, 215, 202);        
+        transition: all .5s linear;
+    }
+
 }
 
 

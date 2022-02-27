@@ -36,17 +36,19 @@ console.log(compScore2, myScore2);
 let welcome = document.getElementById("welcome"); /// start window
 console.log(welcome);
 let gameOver = document.getElementById("gameover"); /// final window, displays myScoreVal, compScoreVal + conditional message for win/lose/tie
+let playButton = document.querySelector(".playButton");
 
 let score = 0;
 
-
-//optional welcome window
+//optional welcome/intro window
 let rockStart = document.getElementById("rockStart");
 let paperStart = document.getElementById("paperStart");
 let scissorsStart = document.getElementById("scissorsStart");
 
-window.addEventListener("load", (e) => {
-    console.log("onload?");
+playButton.addEventListener("click", (e) => {
+    playButton.classList.add("hidden");
+    console.log("onclick?");
+    welcome.classList.remove("hidden")
     let timeout = setTimeout(() => {
         rockStart.classList.remove("hidden")
     }, 2000);
@@ -59,18 +61,15 @@ window.addEventListener("load", (e) => {
     timeout = setTimeout(() => {
         welcome.classList.add("hidden");
     }, 9000)
-
 })
 
-
-
-
-
+//actual game
 symbolCollection.forEach((item) => {
     item.addEventListener("click", () => {
         console.log("test play");
         radio.classList.add("hidden");
         roundCount.classList.remove("hidden");
+        playButton.classList.add("hidden");
         console.log(radio);
         console.log(radio.id);
         if (five.checked) {
@@ -134,7 +133,7 @@ symbolCollection.forEach((item) => {
 
             }
             else {
-                letsPlay.innerHTML = `Scissors<span class="small">(computer)</span> hits Paper<span class="small">(you)</span><br>Computer scored.`
+                letsPlay.innerHTML = `Scissors<span class="small">(computer)</span> hit Paper<span class="small">(you)</span><br>Computer scored.`
                 paper.style.color = "red";
                 rock.style.transition = "all .5s";
                 console.log("compTip = scissors");
@@ -166,7 +165,9 @@ symbolCollection.forEach((item) => {
                 scissors.style.transition = "all .51s";
                 console.log("compTip = scissors");
             }
+
         }
+        //change back symbol color to unset
         window.addEventListener("mousemove", e => {
             paper.style.color = "unset";
             paper.style.transition = "all .5s"
@@ -176,17 +177,15 @@ symbolCollection.forEach((item) => {
             scissors.style.transition = "all .5s"
         })
 
-
-        // item.style.color = "unset";
-
-
         counter++;
         currentRound.innerHTML = counter;
         console.log(counter, totals);
         compScore2.innerHTML = `${compScoreVal}`
         myScore2.innerHTML = `${myScoreVal}`
 
+        //check for end of game
         counter >= totals ? gameOver.classList.remove("hidden") : console.log("continue");
+
         if (compScoreVal < myScoreVal) {
             res.innerHTML = `Congratulations, you made it!`;
             console.log("you won");
@@ -202,7 +201,7 @@ symbolCollection.forEach((item) => {
     });
 });
 
-
+//optional restart/reset
 function restart() {
     window.location.reload();
 }

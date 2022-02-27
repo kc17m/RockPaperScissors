@@ -18,12 +18,19 @@ main {
 
 fieldset {
   width: 79%;
-  padding: 5% 0;
+  padding: 5%;
   margin: 5% auto;
   border: 2px solid #c8c8dd;
   border-radius: 5px;
   font-size: 1.2rem;
   text-align: center;
+}
+@media (min-width: 900px) {
+  fieldset {
+    font-size: 4rem;
+    width: 60%;
+    padding: 5%;
+  }
 }
 
 .radio {
@@ -53,14 +60,22 @@ button {
 }
 
 .symbolCollection {
-  font-size: 6rem;
+  font-size: 5rem;
   cursor: pointer;
   padding: 5%;
   margin: 2%;
 }
 .symbolCollection:hover {
-  font-size: 8rem;
+  font-size: 7rem;
   transition: 0.5s linear;
+}
+@media (min-width: 900px) {
+  .symbolCollection {
+    font-size: 8rem;
+  }
+  .symbolCollection:hover {
+    font-size: 12rem;
+  }
 }
 
 .yellow {
@@ -79,14 +94,13 @@ button {
 }
 
 .small {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: "Courier New", Courier, monospace;
 }
 
 #gameover, #welcome {
   position: absolute;
   width: 90%;
-  height: 500px;
   top: 22%;
   right: 5%;
   background: #23424b;
@@ -96,11 +110,17 @@ button {
   border-radius: 5px;
   box-shadow: 2px 2px 10px lightgrey;
 }
+@media (min-width: 900px) {
+  #gameover, #welcome {
+    font-size: 4rem;
+    width: 67%;
+    right: 17%;
+  }
+}
 
 #welcome {
-  height: 300px;
   width: 80%;
-  right: 12%;
+  right: 9%;
 }
 
 .symbolCollectionSmall {
@@ -124,4 +144,18 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0 5%;
+}
+
+.playButton {
+  width: 69%;
+  margin: 8%;
+  padding: 10%;
+  border: 2px solid #ebd9d6;
+  box-shadow: 2px 2px 4px tomato;
+  background: #e79e3e;
+  font-size: 2rem;
+}
+.playButton:hover, .playButton:active {
+  background: #e4d7ca;
+  transition: all 0.5s linear;
 }/*# sourceMappingURL=style.css.map */

@@ -14,14 +14,14 @@
 
 <body>
     <header>
-
     </header>
     <main>
         <fieldset>
+            <button class="playButton">Want to see the intro?</button>
             <form action="" id="check" onsubmit=" return false >
                 <label for=" roundSelect">
                 <h3>How many rounds you would like to play?</h3></label>
-                <br>
+
                 <div class="radio">
                     <div>
                         <input id="five" value="5" type="radio" name="roundSelect">
@@ -48,29 +48,29 @@
                     </div>
                 </div>
             </form>
-            <div id="roundCount" class="hidden">
+            <article id="roundCount" class="hidden">
                 <h2><span id="currentRound">0</span>/<span id="total">0</span></h2>
-            </div>
+            </article>
         </fieldset>
 
         <fieldset>
-            <div class="flex">
-                <h2>YOU</h2>
-                <h2>COMPUTER</h2>
+            <article class="flex">
+                <h2 class="small">YOU</h2>
+                <h2 class="small">COMPUTER</h2>
 
-            </div>
-            <div>
+            </article>
+            <article>
                 <h1>
                     <span class="myScore">0</span> : <span class="compScore">0</span>
                 </h1>
-            </div>
+            </article>
         </fieldset>
         <section class="play">
             <h3 class="letsPlay">Let's play - just select one of the icons below.</h3>
-            <!-- <button class="playButton" onclick="play()">Klick here to start game</button> -->
 
 
-            <div class="symbols">
+
+            <article class="symbols">
                 <h3 class="symbolCollection" id="rock" alt="rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>
                 </h3>
                 <h3 img class="symbolCollection" id="paper" alt="paper"><i class="fa fa-hand-paper-o"
@@ -78,18 +78,19 @@
                 <h3 class="symbolCollection" id="scissors" alt="scissors"><i class="fa fa-hand-peace-o"
                         aria-hidden="true"></i>
                 </h3>
-            </div>
-            <div>
+            </article>
+            <article>
                 <h3>MAKE YOUR MOVE.</h3>
-            </div>
-            <div id="gameover" class="hidden">
+            </article>
+            <article id="gameover" class="hidden">
+                <h3>GAME OVER!</h3>
                 <h3>Your Score: <span class="myScore2">0</span></h3>
                 <h3>Computer's Score: <span class="compScore2">0</span></h3>
                 <h3 class="res"></h3>
-                <h3>GAME OVER!</h3>
+
                 <button class="reset" onclick="restart()">Play again?</button>
-            </div>
-            <div id="welcome">
+            </article>
+            <article id="welcome" class="hidden">
                 <h1> <img src="assets/img/redPaperbird.png" alt="redPaperBird"> RedPaperBird proudly presents:</h1>
                 <div class="symbols block">
                     <h2 class="symbolCollectionSmall hidden" id="rockStart" alt="rock"><i class="fa fa-hand-rock-o"
@@ -101,8 +102,7 @@
                             class="fa fa-hand-peace-o" aria-hidden="true"></i> SCISSORS
                     </h2>
                 </div>
-            </div>
-
+            </article>
 
             <button class="reset" onclick="restart()">Reset</button>
             </div>
