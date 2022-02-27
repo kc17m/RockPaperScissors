@@ -147,15 +147,58 @@ img {
 }
 
 .playButton {
-  width: 69%;
+  width: 85%;
   margin: 8%;
-  padding: 10%;
+  padding: 5% 3%;
   border: 2px solid #ebd9d6;
   box-shadow: 2px 2px 4px tomato;
   background: #e79e3e;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  position: relative;
 }
 .playButton:hover, .playButton:active {
   background: #e4d7ca;
   transition: all 0.5s linear;
+}
+@media (min-width: 900px) {
+  .playButton {
+    font-size: 2rem;
+    padding: 15% 3%;
+  }
+}
+
+.nothanks, .yesPlease {
+  font-size: 0.5rem;
+  width: 22%;
+  position: absolute;
+  top: 73%;
+  right: 2%;
+  padding: 0;
+  background: #e98007;
+  border: 1px solid #be7070;
+  border-radius: 5px;
+}
+.nothanks:hover, .yesPlease:hover {
+  background: #e7b3aa;
+  transition: all 0.5s linear;
+}
+@media (min-width: 900px) {
+  .nothanks, .yesPlease {
+    font-size: 0.7rem;
+    width: 31%;
+    right: 5%;
+    padding: 2%;
+  }
+}
+.yesPlease {
+  right: 76%;
+  background: #365c4c;
+}
+@media (min-width: 900px) {
+  .yesPlease {
+    font-size: 0.7rem;
+    width: 31%;
+    right: 64%;
+    padding: 2%;
+  }
 }/*# sourceMappingURL=style.css.map */

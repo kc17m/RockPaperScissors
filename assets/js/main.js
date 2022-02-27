@@ -44,8 +44,9 @@ let score = 0;
 let rockStart = document.getElementById("rockStart");
 let paperStart = document.getElementById("paperStart");
 let scissorsStart = document.getElementById("scissorsStart");
+let yesPlease = document.querySelector(".yesPlease")
 
-playButton.addEventListener("click", (e) => {
+yesPlease.addEventListener("click", (e) => {
     playButton.classList.add("hidden");
     console.log("onclick?");
     welcome.classList.remove("hidden")
@@ -62,6 +63,19 @@ playButton.addEventListener("click", (e) => {
         welcome.classList.add("hidden");
     }, 9000)
 })
+
+// //option to ignore intro
+let noThanks = document.querySelector(".nothanks");
+console.log(noThanks);
+
+noThanks.addEventListener("click", (e) => {
+    playButton.classList.add("hidden");
+    noThanks.classList.add("hidden");
+    welcome.classList.add("hidden");
+
+})
+
+
 
 //actual game
 symbolCollection.forEach((item) => {
@@ -200,6 +214,8 @@ symbolCollection.forEach((item) => {
         }
     });
 });
+
+
 
 //optional restart/reset
 function restart() {

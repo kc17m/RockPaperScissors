@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,9 +32,9 @@ fieldset {
 
 .hidden {
     display: none;
-}
+} */
 
-#gameover, #congrats {
+/* #gameover, #congrats {
     position: absolute;
     width: 67%;
     top: 43%;
@@ -50,7 +50,7 @@ fieldset {
 
 #gameover {
     background: rgb(238, 139, 99);
-}
+} */
 
 
 
