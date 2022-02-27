@@ -129,7 +129,7 @@ button {
 }
 
 #paperStart {
-  color: #5b7fcc;
+  color: #443b2f;
 }
 
 #scissorsStart {
@@ -197,11 +197,16 @@ img {
 }
 @media (min-width: 900px) {
   .nothanks, .yesPlease {
-    font-size: 0.7rem;
+    font-size: 1rem;
     width: 31%;
     right: 5%;
     padding: 2%;
   }
+}
+
+.ready {
+  font-size: 3rem;
+  color: #7e3f34;
 }
 
 .yesPlease {
@@ -210,7 +215,6 @@ img {
 }
 @media (min-width: 900px) {
   .yesPlease {
-    font-size: 0.7rem;
     width: 31%;
     right: 64%;
     padding: 2%;

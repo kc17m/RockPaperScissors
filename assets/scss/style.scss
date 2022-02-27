@@ -117,7 +117,7 @@ button {
     color: rgb(226, 162, 103);
 }
 #paperStart {
-    color: rgb(91, 127, 204);
+    color: rgb(68, 59, 47);
 }
 #scissorsStart {
     color: rgb(226, 224, 115);
@@ -161,9 +161,7 @@ img {
     @media (min-width: 900px) {
         font-size: 2rem;
         padding: 15% 3%;
-    } 
-    
-    
+    }    
 }
 
 .nothanks, .yesPlease {
@@ -181,23 +179,28 @@ img {
         transition: all .5s linear;
     }
     @media (min-width: 900px) {
-        font-size: .7rem;
+        font-size: 1rem;
         width: 31%;
         right: 5%;
         padding: 2%;
     } 
 }
 
+.ready {
+    font-size: 3rem;
+    color: rgb(126, 63, 52);    
+}
+
+
+
 .yesPlease {
     right: 76%;       
     background: rgb(54, 92, 76);
     @media (min-width: 900px) {
-        font-size: .7rem;
         width: 31%;
         right: 64%;
         padding: 2%;
-    } 
-     
+    }      
 }
 
 
