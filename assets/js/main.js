@@ -64,6 +64,7 @@ yesPlease.addEventListener("click", (e) => {
     }, 9000)
 })
 
+
 // //option to ignore intro
 let noThanks = document.querySelector(".nothanks");
 console.log(noThanks);
@@ -72,20 +73,15 @@ noThanks.addEventListener("click", (e) => {
     playButton.classList.add("hidden");
     noThanks.classList.add("hidden");
     welcome.classList.add("hidden");
-
 })
 
-
-
-//actual game
+//actual game starts now
 symbolCollection.forEach((item) => {
     item.addEventListener("click", () => {
         console.log("test play");
         radio.classList.add("hidden");
         roundCount.classList.remove("hidden");
         playButton.classList.add("hidden");
-        console.log(radio);
-        console.log(radio.id);
         if (five.checked) {
             totals = 5;
         }

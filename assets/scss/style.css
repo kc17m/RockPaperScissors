@@ -121,6 +121,7 @@ button {
 #welcome {
   width: 80%;
   right: 9%;
+  background: #7a997a;
 }
 
 .symbolCollectionSmall {
@@ -190,6 +191,7 @@ img {
     padding: 2%;
   }
 }
+
 .yesPlease {
   right: 76%;
   background: #365c4c;

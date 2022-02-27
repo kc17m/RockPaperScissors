@@ -31,18 +31,16 @@ fieldset {
     }
 }
 
-
 .radio {
     display: flex;
     justify-content: space-around;
     width: 90%; 
 }
 
- .symbols {
+.symbols {
     margin: 3% auto;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
 
 .hidden {
@@ -113,6 +111,7 @@ button {
 #welcome {
     width: 80%;
     right: 9%;
+    background: rgb(122, 153, 122);
 }
 
 .symbolCollectionSmall {
