@@ -45,6 +45,7 @@ let rockStart = document.getElementById("rockStart");
 let paperStart = document.getElementById("paperStart");
 let scissorsStart = document.getElementById("scissorsStart");
 let yesPlease = document.querySelector(".yesPlease")
+let ready = document.querySelector(".ready");
 
 yesPlease.addEventListener("click", (e) => {
     playButton.classList.add("hidden");
@@ -60,8 +61,11 @@ yesPlease.addEventListener("click", (e) => {
         scissorsStart.classList.remove("hidden")
     }, 6000);
     timeout = setTimeout(() => {
+        ready.classList.remove("hidden");
+    }, 8000)
+    timeout = setTimeout(() => {
         welcome.classList.add("hidden");
-    }, 9000)
+    }, 11000)
 })
 
 

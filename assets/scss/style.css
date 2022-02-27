@@ -124,6 +124,18 @@ button {
   background: #7a997a;
 }
 
+#rockStart {
+  color: #e2a267;
+}
+
+#paperStart {
+  color: #5b7fcc;
+}
+
+#scissorsStart {
+  color: #e2e073;
+}
+
 .symbolCollectionSmall {
   font-size: 2.2rem;
   padding: 2%;
