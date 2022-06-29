@@ -236,7 +236,7 @@ img {
   font-size: .7rem;
   width: 26%;
   position: absolute;
-  top: 60%;
+  top: 62%;
   right: 2%;
   padding: 10px;
   background: #e98007;
@@ -256,7 +256,7 @@ img {
     font-size: 1rem;
     width: 31%;
     right: 5%;
-    padding: 2%;
+    padding: 1%;
   }
 }
 
