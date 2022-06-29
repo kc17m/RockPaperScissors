@@ -233,10 +233,10 @@ img {
 }
 
 .nothanks, .yesPlease {
-  font-size: .9rem;
+  font-size: .8rem;
   width: 34%;
   position: absolute;
-  top: 60%;
+  top: 63%;
   right: 2%;
   padding: 10px;
   background: #e98007;
