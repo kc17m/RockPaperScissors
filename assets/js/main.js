@@ -3,7 +3,7 @@ let five = document.querySelector("#five");
 let ten = document.querySelector("#ten");
 let fifteen = document.querySelector("#fifteen");
 let twenty = document.querySelector("#twenty");
-let radio = document.querySelector(".radio");
+let radio = document.querySelector(".radio-button");
 let roundCount = document.getElementById("roundCount")
 
 //all symbols as node list
@@ -18,7 +18,6 @@ let scissors = document.getElementById("scissors");
 // conditional text
 let letsPlay = document.querySelector(".letsPlay")
 let res = document.querySelector(".res") // will show results
-console.log(res);
 let currentRound = document.querySelector("#currentRound");
 let total = document.querySelector('#total');
 let counter = 0;
@@ -31,10 +30,8 @@ let myScoreVal = 0;
 let compScore = document.querySelector(".compScore");
 let compScore2 = document.querySelector(".compScore2");
 let compScoreVal = 0;
-console.log(compScore2, myScore2);
 
 let welcome = document.getElementById("welcome"); /// start window
-console.log(welcome);
 let gameOver = document.getElementById("gameover"); /// final window, displays myScoreVal, compScoreVal + conditional message for win/lose/tie
 let playButton = document.querySelector(".playButton");
 
@@ -70,7 +67,6 @@ yesPlease.addEventListener("click", (e) => {
 
 // //option to ignore intro
 let noThanks = document.querySelector(".nothanks");
-console.log(noThanks);
 
 noThanks.addEventListener("click", (e) => {
     playButton.classList.add("hidden");
@@ -108,13 +104,13 @@ symbolCollection.forEach((item) => {
         if (myTip == "rock") {
             if (compTip == 1) {
                 letsPlay.innerHTML = `Tie - Rock has been picked by both of you.`
-                rock.style.color = "yellow";
+                letsPlay.style.border = "5px solid yellow";
                 rock.style.transition = "all .5s"
                 console.log("myTipp & compTip = rock");
             }
             else if (compTip == 2) {
                 letsPlay.innerHTML = `Paper<span class="small">(computer)</span> hits Rock<span class="small">(you)</span><br>Computer scored.`
-                rock.style.color = "red";
+                letsPlay.style.border = "5px solid red";
                 rock.style.transition = "all .5s"
                 console.log("compTip = rock");
                 compScoreVal++;
@@ -122,7 +118,7 @@ symbolCollection.forEach((item) => {
             }
             else {
                 letsPlay.innerHTML = `Rock<span class="small">(you)</span> hits Paper<span class="small">(computer)</span><br>You scored.`
-                rock.style.color = "green";
+                letsPlay.style.border = "5px solid green";
                 rock.style.transition = "all .5s"
                 console.log("compTip = scissors");
                 myScoreVal++;
@@ -132,7 +128,7 @@ symbolCollection.forEach((item) => {
         else if (myTip == "paper") {
             if (compTip == 1) {
                 letsPlay.innerHTML = `Paper<span class="small">(you)</span> hits Rock<span class="small">(computer)</span><br>You scored.`
-                paper.style.color = "green";
+                letsPlay.style.border = "5px solid green";
                 rock.style.transition = "all .5s";
                 console.log("compTip = rock");
                 myScoreVal++;
@@ -140,14 +136,14 @@ symbolCollection.forEach((item) => {
             }
             else if (compTip == 2) {
                 letsPlay.innerHTML = `Tie - Paper has been picked by both of you.`
-                paper.style.color = "yellow";
+                letsPlay.style.border = "5px solid yellow";
                 rock.style.transition = "all .5s";
                 console.log("compTip = paper");
 
             }
             else {
                 letsPlay.innerHTML = `Scissors<span class="small">(computer)</span> hit Paper<span class="small">(you)</span><br>Computer scored.`
-                paper.style.color = "red";
+                letsPlay.style.border = "5px solid red";
                 rock.style.transition = "all .5s";
                 console.log("compTip = scissors");
                 compScoreVal++;
@@ -157,7 +153,7 @@ symbolCollection.forEach((item) => {
         else {
             if (compTip == 1) {
                 letsPlay.innerHTML = `Rock<span class="small">(computer)</span> hits Scissors<span class="small">(you)</span><br>Computer scored.`
-                scissors.style.color = "red";
+                letsPlay.style.border = "5px solid red";
                 scissors.style.transition = "all .5s";
                 console.log("compTip = rock");
                 compScoreVal++;
@@ -165,7 +161,7 @@ symbolCollection.forEach((item) => {
             }
             else if (compTip == 2) {
                 letsPlay.innerHTML = `Scissors<span class="small">(you)</span> hit Paper<span class="small">(computer)</span><br>You scored.`
-                scissors.style.color = "green";
+                letsPlay.style.border = "5px solid green";
                 scissors.style.transition = "all .5s";
                 console.log("compTip = paper");
                 myScoreVal++;
@@ -174,18 +170,15 @@ symbolCollection.forEach((item) => {
             }
             else {
                 letsPlay.innerHTML = `Tie - Scissors have been picked by both of you.`
-                scissors.style.color = "yellow";
+                letsPlay.style.border = "5px solid yellow";
                 scissors.style.transition = "all .51s";
                 console.log("compTip = scissors");
             }
         }
         //change back symbol color to unset
         window.addEventListener("mousemove", e => {
-            paper.style.color = "unset";
             paper.style.transition = "all .5s"
-            rock.style.color = "unset";
             rock.style.transition = "all .5s"
-            scissors.style.color = "unset";
             scissors.style.transition = "all .5s"
         })
 

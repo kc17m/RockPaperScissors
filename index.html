@@ -17,42 +17,41 @@
     </header>
     <main>
         <fieldset>
-            <button class="playButton">
+            <section class="playButton">
+                <div class="play-header">
                 <h4>Ready for a stunning intro?</h4>
+                </div>
                 <div class="yesPlease">Show me!</div>
                 <div class="nothanks">No thanks</div>
-            </button>
-
-
-            <form action="" id="check" onsubmit=" return false >
-                <label for=" roundSelect">
-                <h3>How many rounds you would like to play?</h3></label>
-
-                <div class="radio">
+            </section>
+            
+                <h3>How many rounds you would like to play?</h3>
+                <form >                  
+                <div class="radio-button">
                     <div>
                         <input id="five" value="5" type="radio" name="roundSelect">
                         <label for="five">
                             <h4>5</h4>
                         </label>
-                    </div>
-                    <div><input id="ten" value="10" type="radio" name="roundSelect" checked>
+                    
+                        <input id="ten" value="10" type="radio" name="roundSelect" checked>
                         <label for="ten">
                             <h4>10</h4>
                         </label>
                     </div>
-                    <div>
+                    <div>                    
                         <input id="fifteen" value="4" type="radio" name="roundSelect">
                         <label for="fifteen">
                             <h4>15</h4>
                         </label>
-                    </div>
-                    <div>
+                                        
                         <input id="twenty" value="4" type="radio" name="roundSelect">
                         <label for="twenty">
                             <h4>20</h4>
                         </label>
                     </div>
                 </div>
+                
             </form>
             <article id="roundCount" class="hidden">
                 <h2><span id="currentRound">0</span>/<span id="total">0</span></h2>
@@ -77,7 +76,8 @@
 
 
             <article class="symbols">
-                <h3 class="symbolCollection" id="rock" alt="rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+                <h3 class="symbolCollection" id="rock" alt="rock">
+                    <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
                 </h3>
                 <h3 img class="symbolCollection" id="paper" alt="paper"><i class="fa fa-hand-paper-o"
                         aria-hidden="true"></i></h3>
@@ -89,12 +89,14 @@
                 <h3>MAKE YOUR MOVE.</h3>
             </article>
             <article id="gameover" class="hidden">
+                <div class="gameover-text">
                 <h3>GAME OVER!</h3>
                 <h3>Your Score: <span class="myScore2">0</span></h3>
                 <h3>Computer's Score: <span class="compScore2">0</span></h3>
                 <h3 class="res"></h3>
 
                 <button class="reset" onclick="restart()">Play again?</button>
+                </div>
             </article>
             <article id="welcome" class="hidden">
                 <h1> <img src="assets/img/redPaperbird.png" alt="redPaperBird"> RedPaperBird proudly presents:</h1>

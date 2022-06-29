@@ -14,27 +14,46 @@ main {
     color:rgb(255, 255, 255);
     text-align: center;
     box-shadow: 3px 3px 5px rgb(0, 162, 255);
+    max-width: 500px;
+    min-width: 380px;
 }
 
 fieldset {
-    width: 79%;
+    min-width: 93%;
     padding: 5%;
     margin: 5% auto;    
     border: 2px solid rgb(200, 200, 221);
     border-radius: 5px;
     font-size: 1.2rem;    
     text-align: center;
-    @media (min-width: 900px) {
-        font-size: 4rem;
-        width: 60%;
-        padding: 5%;
-    }
+    max-width: 420px;
+    
+    // @media (min-width: 900px) {
+    //     font-size: 4rem;
+    //     width: 60%;
+    //     padding: 5%;
+    // }
 }
 
-.radio {
-    display: flex;
-    justify-content: space-around;
-    width: 90%; 
+.letsPlay {
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.radio-button {
+    display: flex; 
+    flex-direction: column;   
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 20%;
+    padding: 5%;
+    
+    div {
+        width: 50%;
+        } 
+        input {
+            margin: 5%;
+        }
 }
 
 .symbols {
@@ -60,11 +79,11 @@ button {
 .symbolCollection {
     font-size: 5rem;    
     cursor: pointer;
-    padding: 5%;
+    padding: 3%;
     margin: 2%;     
     &:hover  {
-        font-size: 7rem;
-        transition: .5s linear;          
+        font-size: 6rem;
+        transition: .1s linear;          
     }
     @media (min-width: 900px) {
         font-size: 8rem;
@@ -76,15 +95,15 @@ button {
     
 .yellow {
     color: yellow;
-    transition: .5s linear;
+    transition:  linear;
 }
 .green {
     color: green;
-    transition: .5s linear;
+    transition:  linear;
 }
 .red {
     color: red;
-    transition: .5s linear;
+    transition:  linear;
 }
 .small {
     font-size: 1rem;
@@ -94,7 +113,7 @@ button {
 #gameover, #welcome {
     position: absolute;
     width: 90%;
-    top: 22%;
+    top: 26%;
     right: 5%;
     background: rgb(35, 66, 75);
     color: rgb(255, 255, 255);
@@ -102,11 +121,15 @@ button {
     text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px 10px lightgrey;
+    min-height: 480px;
     @media (min-width: 900px) {
         font-size: 4rem;
         width: 67%;
         right: 17%;
-    } 
+    }
+    .gameover-text {
+    margin-top: 17%;
+    }
 }
 #welcome {
     width: 80%;
@@ -154,6 +177,13 @@ img {
     background: rgb(231, 158, 62);
     font-size: 1.5rem;
     position: relative;
+    height: 113px;
+    max-width: 300px;
+    .play-header {
+        position: absolute;
+        top: 16%;
+
+    }
     &:hover, &:active {
         background: rgb(228, 215, 202);        
         transition: all .5s linear;
@@ -165,15 +195,16 @@ img {
 }
 
 .nothanks, .yesPlease {
-    font-size: .5rem;
-    width: 22%;
+    font-size: .7rem;
+    width: 26%;
     position: absolute;
-    top: 73%;
+    top: 60%;
     right: 2%;
-    padding: 0;
+    padding: 10px;
     background: rgb(233, 128, 7);
     border: 1px solid rgb(190, 112, 112);
     border-radius: 5px;
+    min-width: 73px;
     &:hover {
         background: rgb(231, 179, 170);
         transition: all .5s linear;
@@ -194,7 +225,7 @@ img {
 
 
 .yesPlease {
-    right: 76%;       
+    right: 70%;       
     background: rgb(54, 92, 76);
     @media (min-width: 900px) {
         width: 31%;
