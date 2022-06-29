@@ -171,7 +171,7 @@ symbolCollection.forEach((item) => {
             else {
                 letsPlay.innerHTML = `Tie - Scissors have been picked by both of you.`
                 letsPlay.style.border = "5px solid yellow";
-                scissors.style.transition = "all .51s";
+                scissors.style.transition = "all .5s";
                 console.log("compTip = scissors");
             }
         }

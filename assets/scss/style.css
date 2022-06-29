@@ -16,7 +16,7 @@ main {
   text-align: center;
   -webkit-box-shadow: 3px 3px 5px #00a2ff;
           box-shadow: 3px 3px 5px #00a2ff;
-  max-width: 500px;
+  max-width: 492px;
   min-width: 380px;
 }
 
@@ -101,7 +101,7 @@ button {
     font-size: 8rem;
   }
   .symbolCollection:hover {
-    font-size: 12rem;
+    font-size: 10rem;
   }
 }
 
@@ -233,10 +233,10 @@ img {
 }
 
 .nothanks, .yesPlease {
-  font-size: .7rem;
-  width: 26%;
+  font-size: .9rem;
+  width: 34%;
   position: absolute;
-  top: 62%;
+  top: 60%;
   right: 2%;
   padding: 10px;
   background: #e98007;
@@ -254,7 +254,7 @@ img {
 @media (min-width: 900px) {
   .nothanks, .yesPlease {
     font-size: 1rem;
-    width: 31%;
+    max-width: 300px;
     right: 5%;
     padding: 1%;
   }
@@ -266,7 +266,7 @@ img {
 }
 
 .yesPlease {
-  right: 70%;
+  right: 64%;
   background: #365c4c;
 }
 
@@ -274,7 +274,7 @@ img {
   .yesPlease {
     width: 31%;
     right: 64%;
-    padding: 2%;
+    padding: 1%;
   }
 }
 /*# sourceMappingURL=style.css.map */
